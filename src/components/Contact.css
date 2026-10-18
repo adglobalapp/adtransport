@@ -50,9 +50,22 @@
   justify-self: start;
 }
 
-.form__success {
+.form__status {
+  min-height: 1.5em;
   color: var(--color-text);
   font-style: italic;
+}
+
+.form__status.is-error {
+  color: var(--color-danger);
+}
+
+.form__trap {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
 }
 
 @media (max-width: 860px) {

@@ -48,7 +48,12 @@ export type ContactContent = {
   email: string;
   message: string;
   submit: string;
+  /** Levelezőprogramos (mailto) visszajelzés, ha nincs beállítva API. */
   success: string;
+  sending: string;
+  /** Sikeres API-küldés után. */
+  sent: string;
+  error: string;
   subject: string;
   direct: { email: string; phone: string; location: string };
 };

@@ -18,7 +18,7 @@ npm run preview   # a build kiszolgálása
 Minden lecserélhető dolog egy-egy helyen van:
 
 - **Színek, betűk, méretek:** `src/styles/tokens.css` – az egész oldal ezekből a változókból dolgozik. A betűtípusokat az `index.html` tölti be (Google Fonts).
-- **Logó:** a hivatalos AdApp logójel a `public/logo-mark.png`; a mellette álló felirat (`brand.ts` → `logoText`) színátmenete és betűtípusa a `tokens.css` `--logo-*` és `--font-logo` tokenjeiből jön. Teljes kép logóhoz: `brand.ts` → `logoSrc`. Favicon: `public/favicon.png`, `public/apple-touch-icon.png`.
+- **Logó:** a hivatalos AdApp logójel a `public/logo-mark.png`, a láblécben az AdApp logó a `public/adapp-logo.png`; a mellette álló felirat (`brand.ts` → `logoText`) színátmenete és betűtípusa a `tokens.css` `--logo-*` és `--font-logo` tokenjeiből jön. Teljes kép logóhoz: `brand.ts` → `logoSrc`. Böngészőfül- és telefonikonok: `public/favicon.ico`, `favicon-32.png`, `favicon.png`, `apple-touch-icon.png`, `icon-192.png`, `icon-512.png` és `site.webmanifest`.
 - **Név, elérhetőségek, közösségi linkek:** `src/brand.ts`.
 - **Képek:** tedd a fájlokat a `public/images/` mappába, és írd be az útvonalukat a `src/brand.ts` `images` részébe (pl. `portrait: '/images/portre.jpg'`). Amíg egy útvonal üres, csíkos placeholder jelenik meg a helyén.
 - **Szövegek:** a `src/content.ts`-ben a `[szögletes zárójeles]` részek placeholderek (név, évszámok, tanulmányok stb.).
@@ -35,4 +35,14 @@ src/
   components/         # ProfileHero, About, Cards, Timeline, Gallery, Contact, Media (kép/placeholder) …
 ```
 
-A kapcsolati űrlapnak nincs backendje: beküldéskor a látogató levelezőprogramja nyílik meg kitöltött üzenettel a `brand.ts`-ben megadott e-mail címre.
+## Kapcsolati űrlap
+
+Az űrlap az AdReuse Laravel backendjének `POST /api/contact` végpontjára küld (`site: "adtransport"`). Az üzenet ott elmentődik, e-mail értesítés megy róla, és az AdReuse admin felületén (Admin → Üzenetek) olvasható.
+
+Az API címét buildelés előtt kell megadni (`.env.example` alapján egy `.env` fájlban vagy környezeti változóként):
+
+```bash
+VITE_CONTACT_API_URL=https://api.example.com npm run build
+```
+
+Amíg nincs megadva, az űrlap a látogató levelezőprogramját nyitja meg kitöltött üzenettel a `brand.ts`-ben megadott címre.
