@@ -46,3 +46,15 @@ VITE_CONTACT_API_URL=https://api.example.com npm run build
 ```
 
 Amíg nincs megadva, az űrlap a látogató levelezőprogramját nyitja meg kitöltött üzenettel a `brand.ts`-ben megadott címre.
+
+## Élesítés (Docker)
+
+Minden `main`-re kerülő változás után a GitHub Actions (`.github/workflows/docker.yml`) elkészíti és feltölti az image-et ARM64-re (Raspberry Pi) és amd64-re:
+
+```
+ghcr.io/adglobalapp/adtransport:latest
+```
+
+Az image egy nginx, ami a buildelt oldalt szolgálja ki a 80-as porton (`nginx.conf`: tömörítés, hosszú cache az `assets/` fájlokra, ismeretlen útvonalra `index.html`). Kipróbálás: `docker run --rm -p 8080:80 ghcr.io/adglobalapp/adtransport:latest`.
+
+A kapcsolati API címe a repó beállításaiban adható meg: Settings → Secrets and variables → Actions → **Variables** → `CONTACT_API_URL` (pl. `https://api.adreuse.uk`). Amíg nincs megadva, az űrlap a levelezőprogramot nyitja meg.
