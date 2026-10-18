@@ -18,7 +18,7 @@
 }
 
 .timeline__item:hover {
-  border-top-color: var(--color-brand-500);
+  border-top-color: var(--color-brand-hover);
 }
 
 .timeline__period {

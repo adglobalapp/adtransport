@@ -11,7 +11,9 @@ export const brand = {
   name: 'AdTransport',
   /** Szöveges logó két fele a jel előtt és után. */
   logoText: ['Ad', 'Transport'] as [string, string],
-  /** Kép logó, pl. '/logo.svg'. Ha meg van adva, a szöveges logó helyett ez jelenik meg. */
+  /** A logójel (céltábla) képe a public/ mappából. */
+  logoMarkSrc: '/logo-mark.png',
+  /** Teljes kép logó, pl. '/logo.svg'. Ha meg van adva, a szöveges logó helyett ez jelenik meg. */
   logoSrc: '' as string,
 
   email: 'hello@adtransport.example',
