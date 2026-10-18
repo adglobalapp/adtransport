@@ -18,7 +18,7 @@ export const brand = {
 
   email: 'info@adglobalapp.com',
   /** Telefonszámok a kapcsolat részben, egymás alatt. */
-  phones: ['+44 7583 056817', '+34 648 010 830'],
+  phones: ['+44 7572 412814'],
   location: 'Budapest, HU',
 
   social: [
