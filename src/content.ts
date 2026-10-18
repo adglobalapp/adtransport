@@ -115,7 +115,7 @@ const hu: Content = {
   },
   footer: {
     tags: ['Fuvarozás', 'Költöztetés', 'Logisztika'],
-    registered: 'Az Egyesült Királyságban bejegyzett cég.', rights: 'Minden jog fenntartva.',
+    registered: 'Bejegyezve: Anglia és Wales', companyNo: 'Cégjegyzékszám', office: 'Bejegyzett székhely', rights: 'Minden jog fenntartva.',
   },
 };
 
@@ -205,7 +205,7 @@ const en: Content = {
   },
   footer: {
     tags: ['Freight', 'Removals', 'Logistics'],
-    registered: 'Registered in the UK.', rights: 'All rights reserved.',
+    registered: 'Registered in England & Wales', companyNo: 'Company no.', office: 'Registered office', rights: 'All rights reserved.',
   },
 };
 
@@ -295,7 +295,7 @@ const es: Content = {
   },
   footer: {
     tags: ['Transporte', 'Mudanzas', 'Logística'],
-    registered: 'Registrada en el Reino Unido.', rights: 'Todos los derechos reservados.',
+    registered: 'Registrada en Inglaterra y Gales', companyNo: 'N.º de empresa', office: 'Domicilio social', rights: 'Todos los derechos reservados.',
   },
 };
 
