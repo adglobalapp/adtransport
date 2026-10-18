@@ -34,7 +34,7 @@ jobs:
           push: true
           build-args: |
             VITE_CONTACT_API_URL=${{ vars.CONTACT_API_URL || 'https://api.adreuse.uk' }}
-            VITE_TURNSTILE_SITE_KEY=${{ vars.TURNSTILE_SITE_KEY }}
+            VITE_TURNSTILE_SITE_KEY=${{ vars.TURNSTILE_SITE_KEY || '0x4AAAAAAFaRt6H2DpZc5GCF' }}
           tags: |
             ghcr.io/adglobalapp/adtransport:latest
             ghcr.io/adglobalapp/adtransport:${{ github.sha }}
