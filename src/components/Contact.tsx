@@ -56,7 +56,13 @@ export function Contact({ contact }: { contact: ContactContent }) {
             <li>
               <Icon name="phone" size={18} />
               <span className="contact__key">{contact.direct.phone}</span>
-              <a href={`tel:${brand.phone.replace(/\s+/g, '')}`}>{brand.phone}</a>
+              <span className="contact__values">
+                {brand.phones.map((phone) => (
+                  <a key={phone} href={`tel:${phone.replace(/\s+/g, '')}`}>
+                    {phone}
+                  </a>
+                ))}
+              </span>
             </li>
             <li>
               <Icon name="pin" size={18} />

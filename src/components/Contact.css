@@ -104,8 +104,17 @@
   color: var(--color-text-subtle);
 }
 
+.contact__values {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.contact__direct li:has(.contact__values) {
+  align-items: start;
+}
+
 .contact__direct a:hover {
-  color: var(--color-text);
+  color: var(--color-brand-hover);
 }
 
 @media (max-width: 520px) {

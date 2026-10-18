@@ -17,7 +17,8 @@ export const brand = {
   logoSrc: '' as string,
 
   email: 'hello@adtransport.example',
-  phone: '+36 00 000 0000',
+  /** Telefonszámok a kapcsolat részben, egymás alatt. */
+  phones: ['+44 7583 056817', '+34 648 010 830'],
   location: 'Budapest, HU',
 
   social: [
