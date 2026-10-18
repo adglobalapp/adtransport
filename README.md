@@ -1,1 +1,48 @@
 # adtransport
+
+Portfólió oldal egy szállítási / fuvarozó vállalkozás és annak vezetője számára: bemutatkozás, szolgáltatások, flotta-galéria, tapasztalat és képesítések, ajánlatkérés. Az [adlanding](https://github.com/adglobalapp/adlanding) letisztult fekete–piros arculatára épül.
+
+**Stack:** React 19 · TypeScript · CSS (custom property tokenek) · Vite
+
+## Futtatás
+
+```bash
+npm install
+npm run dev       # http://localhost:5173
+npm run build     # típusellenőrzés + production build a dist/ mappába
+npm run preview   # a build kiszolgálása
+```
+
+## Arculat cseréje
+
+Minden lecserélhető dolog egy-egy helyen van:
+
+- **Színek, betűk, méretek:** `src/styles/tokens.css` – az egész oldal ezekből a változókból dolgozik. A betűtípusokat az `index.html` tölti be (Google Fonts).
+- **Logó:** a hivatalos AdApp logójel a `public/logo-mark.png`, a láblécben az AdApp logó a `public/adapp-logo.png`; a mellette álló felirat (`brand.ts` → `logoText`) színátmenete és betűtípusa a `tokens.css` `--logo-*` és `--font-logo` tokenjeiből jön. Teljes kép logóhoz: `brand.ts` → `logoSrc`. Böngészőfül- és telefonikonok: `public/favicon.ico`, `favicon-32.png`, `favicon.png`, `apple-touch-icon.png`, `icon-192.png`, `icon-512.png` és `site.webmanifest`.
+- **Név, elérhetőségek, közösségi linkek:** `src/brand.ts`.
+- **Képek:** tedd a fájlokat a `public/images/` mappába, és írd be az útvonalukat a `src/brand.ts` `images` részébe (pl. `portrait: '/images/portre.jpg'`). Amíg egy útvonal üres, csíkos placeholder jelenik meg a helyén.
+- **Szövegek:** a `src/content.ts`-ben a `[szögletes zárójeles]` részek placeholderek (név, évszámok, tanulmányok stb.).
+
+## Felépítés
+
+```
+src/
+  brand.ts            # név, logó, elérhetőségek, közösségi linkek, képek útvonala
+  content.ts          # a teljes szöveges tartalom 3 nyelven (EN · ES · HU)
+  types.ts            # a szekciók tartalmának típusai
+  styles/tokens.css   # design tokenek (szín, tipográfia, spacing, radius, motion)
+  styles/base.css     # reset, globális elemek, utility osztályok
+  components/         # ProfileHero, About, Cards, Timeline, Gallery, Contact, Media (kép/placeholder) …
+```
+
+## Kapcsolati űrlap
+
+Az űrlap az AdReuse Laravel backendjének `POST /api/contact` végpontjára küld (`site: "adtransport"`). Az üzenet ott elmentődik, e-mail értesítés megy róla, és az AdReuse admin felületén (Admin → Üzenetek) olvasható.
+
+Az API címét buildelés előtt kell megadni (`.env.example` alapján egy `.env` fájlban vagy környezeti változóként):
+
+```bash
+VITE_CONTACT_API_URL=https://api.example.com npm run build
+```
+
+Amíg nincs megadva, az űrlap a látogató levelezőprogramját nyitja meg kitöltött üzenettel a `brand.ts`-ben megadott címre.
