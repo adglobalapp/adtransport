@@ -8,11 +8,13 @@ import './Header.css';
 export function Header() {
   const { lang, setLang, t } = useI18n();
   const [open, setOpen] = useState(false);
+  // Az aloldalakon (pl. /privacy) a horgonyok a főoldalra mutassanak
+  const onHome = window.location.pathname === '/';
 
   return (
     <header className="header">
       <div className="container header__inner">
-        <Logo />
+        <Logo href={onHome ? '#top' : '/'} />
 
         <div className="header__right">
           <div className="lang" role="group" aria-label="Language">
@@ -33,7 +35,7 @@ export function Header() {
             <>
               <nav className={`header__nav ${open ? 'is-open' : ''}`} aria-label="Main">
                 {t.nav.map((link) => (
-                  <a key={link.href} href={link.href} onClick={() => setOpen(false)}>
+                  <a key={link.href} href={onHome ? link.href : `/${link.href}`} onClick={() => setOpen(false)}>
                     {link.label}
                   </a>
                 ))}
