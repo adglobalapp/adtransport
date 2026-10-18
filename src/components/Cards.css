@@ -22,9 +22,6 @@
   transition: opacity var(--duration-normal);
 }
 
-.card:hover {
-  border-color: var(--color-brand-alpha);
-}
 
 .card:hover > * {
   opacity: 1;
@@ -45,9 +42,6 @@
   transition: color var(--duration-normal);
 }
 
-.card:hover .card__title {
-  color: var(--color-brand-hover);
-}
 
 .card__meta {
   display: block;
