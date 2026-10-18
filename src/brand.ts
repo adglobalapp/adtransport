@@ -16,7 +16,7 @@ export const brand = {
   /** Teljes kép logó, pl. '/logo.svg'. Ha meg van adva, a szöveges logó helyett ez jelenik meg. */
   logoSrc: '' as string,
 
-  email: 'hello@adtransport.example',
+  email: 'info@adglobalapp.com',
   /** Telefonszámok a kapcsolat részben, egymás alatt. */
   phones: ['+44 7583 056817', '+34 648 010 830'],
   location: 'Budapest, HU',
