@@ -53,4 +53,4 @@ export type ContactContent = {
   direct: { email: string; phone: string; location: string };
 };
 
-export type FooterContent = { tags: string[]; rights: string };
+export type FooterContent = { tags: string[]; registered: string; rights: string };

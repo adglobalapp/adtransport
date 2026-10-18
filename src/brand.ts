@@ -21,8 +21,7 @@ export const brand = {
   location: 'Budapest, HU',
 
   social: [
-    { label: 'LinkedIn', href: 'https://www.linkedin.com', icon: 'linkedin' },
-    { label: 'Facebook', href: 'https://www.facebook.com', icon: 'facebook' },
+    { label: 'LinkedIn', href: 'https://uk.linkedin.com/company/adglobalapp', icon: 'linkedin' },
   ] satisfies { label: string; href: string; icon: IconName }[],
 
   images: {
@@ -30,5 +29,13 @@ export const brand = {
     about: '',
     /** A galéria képei sorrendben; a content.ts galéria elemeihez igazodik. */
     gallery: ['', '', '', '', '', ''] as string[],
+  },
+
+  /** Anyacég: a láblécben a logója és a jogi sor. */
+  parent: {
+    name: 'AdGlobalApp',
+    company: 'AdGlobalApp Ltd.',
+    url: 'https://www.adglobalapp.com',
+    logoSrc: '/adapp-logo.png',
   },
 };

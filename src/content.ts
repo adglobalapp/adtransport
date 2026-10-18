@@ -114,7 +114,7 @@ const hu: Content = {
   },
   footer: {
     tags: ['Fuvarozás', 'Költöztetés', 'Logisztika'],
-    rights: 'Minden jog fenntartva.',
+    registered: 'Az Egyesült Királyságban bejegyzett cég.', rights: 'Minden jog fenntartva.',
   },
 };
 
@@ -203,7 +203,7 @@ const en: Content = {
   },
   footer: {
     tags: ['Freight', 'Removals', 'Logistics'],
-    rights: 'All rights reserved.',
+    registered: 'Registered in the UK.', rights: 'All rights reserved.',
   },
 };
 
@@ -292,7 +292,7 @@ const es: Content = {
   },
   footer: {
     tags: ['Transporte', 'Mudanzas', 'Logística'],
-    rights: 'Todos los derechos reservados.',
+    registered: 'Registrada en el Reino Unido.', rights: 'Todos los derechos reservados.',
   },
 };
 
