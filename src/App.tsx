@@ -5,6 +5,7 @@ import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { Gallery } from './components/Gallery';
 import { Header } from './components/Header';
+import { Privacy } from './components/Privacy';
 import { ProfileHero } from './components/ProfileHero';
 import { Timeline } from './components/Timeline';
 import { useI18n } from './i18n';
@@ -15,6 +16,19 @@ export function App() {
 
   // Nyelvváltáskor újrarenderelt elemek is kapjanak reveal-t
   useEffect(() => initReveal(), [lang]);
+
+  // Egyetlen aloldal: /privacy (az nginx minden ismeretlen útvonalra az index.html-t adja)
+  if (window.location.pathname.replace(/\/$/, '') === '/privacy') {
+    return (
+      <>
+        <Header />
+        <main>
+          <Privacy />
+        </main>
+        <Footer />
+      </>
+    );
+  }
 
   return (
     <>
