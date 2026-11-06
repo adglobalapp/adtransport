@@ -39,7 +39,7 @@ const hu: Content = {
     { label: 'Kapcsolat', href: '#contact' },
   ],
   hero: {
-    eyebrow: 'Fuvarozás · Logisztika · Zoltan Hubanov-Dimitrov',
+    eyebrow: 'Fuvarozás · Logisztika',
     lines: ['Időben,', 'épen,', 'célba.'],
     quote: '„Megbízható szállítás itthon és külföldön – a csomagtól a teljes rakományig.”',
     primaryCta: 'Fuvart kérek',
@@ -54,7 +54,7 @@ const hu: Content = {
   ],
   about: {
     label: 'Rólam',
-    title: 'Zoltan Hubanov-Dimitrov',
+    title: 'AdTransport',
     paragraphs: [
       '[Rövid bemutatkozás: ki vagy, mióta dolgozol a szállításban, hogyan indult a vállalkozás.]',
       '[Mire vagy büszke: megbízhatóság, pontosság, visszatérő ügyfelek.]',
@@ -129,7 +129,7 @@ const en: Content = {
     { label: 'Contact', href: '#contact' },
   ],
   hero: {
-    eyebrow: 'Transport · Logistics · Zoltan Hubanov-Dimitrov',
+    eyebrow: 'Transport · Logistics',
     lines: ['On time,', 'intact,', 'delivered.'],
     quote: '"Reliable transport at home and abroad – from a single parcel to a full load."',
     primaryCta: 'Request transport',
@@ -144,7 +144,7 @@ const en: Content = {
   ],
   about: {
     label: 'About',
-    title: 'Zoltan Hubanov-Dimitrov',
+    title: 'AdTransport',
     paragraphs: [
       '[Short introduction: who you are, how long you have worked in transport, how the business started.]',
       '[What you are proud of: reliability, punctuality, returning clients.]',
@@ -219,7 +219,7 @@ const es: Content = {
     { label: 'Contacto', href: '#contact' },
   ],
   hero: {
-    eyebrow: 'Transporte · Logística · Zoltan Hubanov-Dimitrov',
+    eyebrow: 'Transporte · Logística',
     lines: ['A tiempo,', 'intacto,', 'entregado.'],
     quote: '«Transporte fiable en el país y en el extranjero: desde un paquete hasta una carga completa.»',
     primaryCta: 'Pedir transporte',
@@ -234,7 +234,7 @@ const es: Content = {
   ],
   about: {
     label: 'Sobre mí',
-    title: 'Zoltan Hubanov-Dimitrov',
+    title: 'AdTransport',
     paragraphs: [
       '[Breve presentación: quién eres, cuánto tiempo llevas en el transporte, cómo empezó el negocio.]',
       '[De qué estás orgulloso: fiabilidad, puntualidad, clientes que repiten.]',
